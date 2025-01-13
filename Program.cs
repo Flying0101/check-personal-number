@@ -46,13 +46,6 @@
 
             //Check for number length?
             //Check for days, 31 days in febuary? 31 days in all 12 months?
-
-
-
-
-
-
-
             if (!personNumber.All(char.IsDigit) || personNumber.Length != 10)
             {
                 return false;
@@ -85,12 +78,12 @@
 
             string text = "HAHAHA";
             Console.ForegroundColor = ConsoleColor.Red;
-           
+
             int centerY = Console.WindowHeight / 2;    // Center the HAHAHA text vertically
             for (int i = 0; i < text.Length; i++)
             {
                 Console.Clear();
-              
+
                 string displayText = text.Substring(0, i + 1);     // Display the HAHAHA text one letter at a time
                 int padding = (Console.WindowWidth - displayText.Length) / 2; // Center the text horizontally
 
@@ -102,19 +95,54 @@
 
             Thread.Sleep(2000);
             Console.Clear();
-            
-            string goodbyeMessage = "Goodbye!";   
-            int goodbyeX = (Console.WindowWidth - goodbyeMessage.Length) / 2; 
-            int goodbyeY = Console.WindowHeight / 2; 
+
+            string goodbyeMessage = "Goodbye!";
+            int goodbyeX = (Console.WindowWidth - goodbyeMessage.Length) / 2;
+            int goodbyeY = Console.WindowHeight / 2;
             Console.SetCursorPosition(goodbyeX, goodbyeY);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(goodbyeMessage);
 
-            Thread.Sleep(2000); 
+            Thread.Sleep(2000);
             Console.ResetColor();
 
             Environment.Exit(0); // Exit the program
         }
 
+    }
+
+    public class NumberChecker
+    {
+        public string PersonalNumber { get; set; }
+
+        public static bool IsValidPersonalNumber(string personNumber)
+        {
+            //Check for number length?
+            //Check for days, 31 days in febuary? 31 days in all 12 months?
+            if (!personNumber.All(char.IsDigit) || personNumber.Length != 10)
+            {
+                return false;
+            }
+
+            int[] personNumberArray = new int[personNumber.Length];
+            for (int i = 0; i < personNumber.Length; i++)
+            {
+                if (!int.TryParse(personNumber[i].ToString(), out personNumberArray[i]))
+                    return false;
+            }
+
+            int month = personNumberArray[2] * 10 + personNumberArray[3];
+            if (month < 0 || month > 12)
+            {
+                return false;
+            }
+
+            int day = personNumberArray[4] * 10 + personNumberArray[5];
+            if (day < 0 || day > 31)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }
