@@ -12,12 +12,15 @@
                 Console.WriteLine("YYMMDDXXXX");
                 personNumber = Console.ReadLine();
 
-                if (!IsValidPersonalNumber(personNumber))
+
+                if (!IsValid.IsValidPersonalNumber(personNumber))
+
                 {
                     Console.WriteLine("Invalid Person number. Please try again!");
                 }
             }
-            while (!IsValidPersonalNumber(personNumber));
+
+            while (!IsValid.IsValidPersonalNumber(personNumber));
             Console.Clear();
             Console.WriteLine("Personal number accepted...");
             Console.WriteLine("Stealing your identity...");
@@ -40,37 +43,7 @@
             ExitMove();
         }
 
-        public static bool IsValidPersonalNumber(string personNumber)
-        {
-
-
-            //Check for number length?
-            //Check for days, 31 days in febuary? 31 days in all 12 months?
-            if (!personNumber.All(char.IsDigit) || personNumber.Length != 10)
-            {
-                return false;
-            }
-
-            int[] personNumberArray = new int[personNumber.Length];
-            for (int i = 0; i < personNumber.Length; i++)
-            {
-                if (!int.TryParse(personNumber[i].ToString(), out personNumberArray[i]))
-                    return false;
-            }
-
-            int month = personNumberArray[2] * 10 + personNumberArray[3];
-            if (month < 0 || month > 12)
-            {
-                return false;
-            }
-
-            int day = personNumberArray[4] * 10 + personNumberArray[5];
-            if (day < 0 || day > 31)
-            {
-                return false;
-            }
-            return true;
-        }
+        
 
         public static void ExitMove()
         {
@@ -107,42 +80,19 @@
             Console.ResetColor();
 
             Environment.Exit(0); // Exit the program
+
+
+
+
+
+
         }
+
 
     }
 
-    public class NumberChecker
-    {
-        public string PersonalNumber { get; set; }
 
-        public static bool IsValidPersonalNumber(string personNumber)
-        {
-            //Check for number length?
-            //Check for days, 31 days in febuary? 31 days in all 12 months?
-            if (!personNumber.All(char.IsDigit) || personNumber.Length != 10)
-            {
-                return false;
-            }
 
-            int[] personNumberArray = new int[personNumber.Length];
-            for (int i = 0; i < personNumber.Length; i++)
-            {
-                if (!int.TryParse(personNumber[i].ToString(), out personNumberArray[i]))
-                    return false;
-            }
 
-            int month = personNumberArray[2] * 10 + personNumberArray[3];
-            if (month < 0 || month > 12)
-            {
-                return false;
-            }
 
-            int day = personNumberArray[4] * 10 + personNumberArray[5];
-            if (day < 0 || day > 31)
-            {
-                return false;
-            }
-            return true;
-        }
-    }
 }
