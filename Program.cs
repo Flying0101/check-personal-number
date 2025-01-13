@@ -4,9 +4,6 @@
     {
         static void Main(string[] args)
         {
-<<<<<<< HEAD
-            Console.WriteLine("Hej hopp gummisnopp!");
-=======
             string personNumber = " ";
 
             do
@@ -41,11 +38,21 @@
 
             Thread.Sleep(2000);
             ExitMove();
->>>>>>> main
         }
 
         public static bool IsValidPersonalNumber(string personNumber)
         {
+
+
+            //Check for number length?
+            //Check for days, 31 days in febuary? 31 days in all 12 months?
+
+
+
+
+
+
+
             if (!personNumber.All(char.IsDigit) || personNumber.Length != 10)
             {
                 return false;
