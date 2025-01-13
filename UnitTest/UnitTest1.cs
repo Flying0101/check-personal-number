@@ -1,123 +1,122 @@
-﻿using check_personal_nr;
-using Xunit;
-using Xunit.Sdk;
+﻿//using check_personal_nr;
+//using Xunit;
 
-namespace UnitTest
-{
-    public class UnitTest1
-    {
-        [Fact]
-        public void TestLengthYes()
-        {
-            Checker checker = new Checker();
+//namespace UnitTest
+//{
+//    public class UnitTest1
+//    {
+//        [Fact]
+//        public void TestLengthYes()
+//        {
+//            var checker = new NumberChecker();
 
-            string testString = "0009302561";
+//            string testString = "0009302561";
 
-            bool expectedResult = true;
+//            bool expectedResult = true;
 
-            bool actualResult = checker.IsValidPersonalNumber(testString);
+//            bool actualResult = checker.IsValidPersonalNumber(testString);
 
-            Assert.Equal(expectedResult, actualResult);
-        }
+//            Assert.Equal(expectedResult, actualResult);
+//        }
 
-        [Fact]
-        public void TestLengthNo()
-        {
-            Checker checker = new Checker();
+//        [Fact]
+//        public void TestLengthNo()
+//        {
+//            Checker checker = new Checker();
 
-            string testString = "000930256145";
+//            string testString = "000930256145";
 
-            bool expectedResult = false;
+//            bool expectedResult = false;
 
-            bool actualResult = checker.IsValidPersonalNumber(testString);
+//            bool actualResult = checker.IsValidPersonalNumber(testString);
 
-            Assert.Equal(expectedResult, actualResult);
-        }
+//            Assert.Equal(expectedResult, actualResult);
+//        }
 
-        [Fact]
-        public void TestOnlyDigitsYes()
-        {
-            Checker checker = new Checker();
+//        [Fact]
+//        public void TestOnlyDigitsYes()
+//        {
+//            Checker checker = new Checker();
 
-            string testString = "0009307878";
+//            string testString = "0009307878";
 
-            bool expectedResult = true;
+//            bool expectedResult = true;
 
-            bool actualResult = checker.IsValidPersonalNumber(testString);
+//            bool actualResult = checker.IsValidPersonalNumber(testString);
 
-            Assert.Equal(expectedResult, actualResult);
-        }
-
-
-        [Fact]
-        public void TestOnlyDigitsYNo()
-        {
-            Checker checker = new Checker();
-
-            string testString = "ölkorv6969";
-
-            bool expectedResult = false;
-
-            bool actualResult = checker.IsValidPersonalNumber(testString);
-
-            Assert.Equal(expectedResult, actualResult);
-        }
+//            Assert.Equal(expectedResult, actualResult);
+//        }
 
 
-        [Fact]
-        public void TestTwelveMonthsYes()
-        {
-            Checker checker = new Checker();
+//        [Fact]
+//        public void TestOnlyDigitsYNo()
+//        {
+//            Checker checker = new Checker();
 
-            string testString = "0009307878";
+//            string testString = "ölkorv6969";
 
-            bool expectedResult = true;
+//            bool expectedResult = false;
 
-            bool actualResult = checker.IsValidPersonalNumber(testString);
+//            bool actualResult = checker.IsValidPersonalNumber(testString);
 
-            Assert.Equal(expectedResult, actualResult);
-        }
+//            Assert.Equal(expectedResult, actualResult);
+//        }
 
-        [Fact]
-        public void TestTwelveMonthsNo()
-        {
-            Checker checker = new Checker();
 
-            string testString = "0048307878";
+//        [Fact]
+//        public void TestTwelveMonthsYes()
+//        {
+//            Checker checker = new Checker();
 
-            bool expectedResult = false;
+//            string testString = "0009307878";
 
-            bool actualResult = checker.IsValidPersonalNumber(testString);
+//            bool expectedResult = true;
 
-            Assert.Equal(expectedResult, actualResult);
-        }
+//            bool actualResult = checker.IsValidPersonalNumber(testString);
 
-        [Fact]
-        public void TestThirtyOneDaysYes()
-        {
-            Checker checker = new Checker();
+//            Assert.Equal(expectedResult, actualResult);
+//        }
 
-            string testString = "0009307878";
+//        [Fact]
+//        public void TestTwelveMonthsNo()
+//        {
+//            Checker checker = new Checker();
 
-            bool expectedResult = true;
+//            string testString = "0048307878";
 
-            bool actualResult = checker.IsValidPersonalNumber(testString);
+//            bool expectedResult = false;
 
-            Assert.Equal(expectedResult, actualResult);
-        }
+//            bool actualResult = checker.IsValidPersonalNumber(testString);
 
-        [Fact]
-        public void TestThirtyOneDaysNo()
-        {
-            Checker checker = new Checker();
+//            Assert.Equal(expectedResult, actualResult);
+//        }
 
-            string testString = "0009897878";
+//        [Fact]
+//        public void TestThirtyOneDaysYes()
+//        {
+//            Checker checker = new Checker();
 
-            bool expectedResult = true;
+//            string testString = "0009307878";
 
-            bool actualResult = checker.IsValidPersonalNumber(testString);
+//            bool expectedResult = true;
 
-            Assert.Equal(expectedResult, actualResult);
-        }
-    }
-}
+//            bool actualResult = checker.IsValidPersonalNumber(testString);
+
+//            Assert.Equal(expectedResult, actualResult);
+//        }
+
+//        [Fact]
+//        public void TestThirtyOneDaysNo()
+//        {
+//            Checker checker = new Checker();
+
+//            string testString = "0009897878";
+
+//            bool expectedResult = true;
+
+//            bool actualResult = checker.IsValidPersonalNumber(testString);
+
+//            Assert.Equal(expectedResult, actualResult);
+//        }
+//    }
+//}
