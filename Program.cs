@@ -1,4 +1,5 @@
-﻿namespace check_personal_nr
+﻿
+namespace check_personal_nr
 {
     internal class Program
     {
