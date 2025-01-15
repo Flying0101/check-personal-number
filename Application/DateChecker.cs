@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace check_personal_nr
+﻿namespace check_personal_nr
 {
-    public class DateChecker 
+    public class DateChecker
     {
-        public static bool DateofBirth(int[] numberArray)                  // method checking the month and date that they fit within given parameters
+        // method checking the month and date that they fit within given parameters
+        public static bool DateofBirth(int[] numberArray)
         {
-            IsValid isValid = new IsValid();                               //new instance of IsValid Created
+            IsValid isValid = new IsValid(); //new instance of IsValid Created
 
-            int month = numberArray[2] * 10 + numberArray[3];                        
+            int month = numberArray[2] * 10 + numberArray[3];
             if (month < 0 || month > 12)
             {
                 return false;
@@ -23,7 +18,8 @@ namespace check_personal_nr
             {
                 return false;
             }
-            return true;                                      // if not within given parameters it returns false
+            // if not within given parameters it returns false
+            return true;
         }
     }
 }
