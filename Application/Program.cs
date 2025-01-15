@@ -7,7 +7,7 @@ namespace check_personal_nr
         {
             string personNumber = " ";
 
-            // initial do while loop, if all the check bools are not correct the do while loop replays until a correct answe  is given
+            // initial do while loop, if all the check bools are not correct the do while loop replays until a correct answe is given
             do
             {
                 Console.WriteLine("Input your personal number below. (10 or 12 digits)");
