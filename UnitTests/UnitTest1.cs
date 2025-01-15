@@ -14,7 +14,7 @@ namespace UnitTest
 
             bool expectedResult = true;
 
-            bool actualResult = IsValid.IsValidPersonalNumber(testString);
+            bool actualResult = LenghtChecker.NumberandLenghtChecker(testString);
 
             Assert.Equal(expectedResult, actualResult);
         }
@@ -28,7 +28,7 @@ namespace UnitTest
 
             bool expectedResult = false;
 
-            bool actualResult = IsValid.IsValidPersonalNumber(testString);
+            bool actualResult = LenghtChecker.NumberandLenghtChecker(testString);
 
             Assert.Equal(expectedResult, actualResult);
         }
@@ -42,7 +42,7 @@ namespace UnitTest
 
             bool expectedResult = true;
 
-            bool actualResult = IsValid.IsValidPersonalNumber(testString);
+            bool actualResult = LenghtChecker.NumberandLenghtChecker(testString);
 
             Assert.Equal(expectedResult, actualResult);
         }
@@ -57,7 +57,7 @@ namespace UnitTest
 
             bool expectedResult = false;
 
-            bool actualResult = IsValid.IsValidPersonalNumber(testString);
+            bool actualResult = LenghtChecker.NumberandLenghtChecker(testString);
 
             Assert.Equal(expectedResult, actualResult);
         }
@@ -67,12 +67,12 @@ namespace UnitTest
         public void TestTwelveMonthsYes()
         {
 
-
-            string testString = "0009307878";
+            string teststring = "0009302918";
+            int[] testArray = {0, 0, 0, 9, 3, 0, 2, 9, 4, 5};
 
             bool expectedResult = true;
 
-            bool actualResult = IsValid.IsValidPersonalNumber(testString);
+            bool actualResult = DateChecker.DateofBirth(teststring, testArray);
 
             Assert.Equal(expectedResult, actualResult);
         }
@@ -81,42 +81,14 @@ namespace UnitTest
         public void TestTwelveMonthsNo()
         {
 
-
-            string testString = "0048307878";
+            string teststring = "0014302918";
+            int[] testArray = { 0, 0, 1, 4, 3, 0, 2, 9, 4, 5 };
 
             bool expectedResult = false;
 
-            bool actualResult = IsValid.IsValidPersonalNumber(testString);
+            bool actualResult = DateChecker.DateofBirth(teststring, testArray);
 
             Assert.Equal(expectedResult, actualResult);
         }
-
-        //[Fact]
-        //public void TestThirtyOneDaysYes()
-        //{
-
-
-        //    string testString = "0009307878";
-
-        //    bool expectedResult = true;
-
-        //    bool actualResult = IsValid.IsValidPersonalNumber(testString);
-
-        //    Assert.Equal(expectedResult, actualResult);
-        //}
-
-        //[Fact]
-        //public void TestThirtyOneDaysNo()
-        //{
-
-
-        //    string testString = "0009897878";
-
-        //    bool expectedResult = true;
-
-        //    bool actualResult = IsValid.IsValidPersonalNumber(testString);
-
-        //    Assert.Equal(expectedResult, actualResult);
-        //}
     }
 }
