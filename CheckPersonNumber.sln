@@ -7,14 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "UnitTests\Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "check-personal-nr", "Application\check-personal-nr.csproj", "{C98D7355-EC1F-4F8B-8E0D-505B31B61998}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{4DEA0310-5A20-4B9E-BFCD-8204F8231461}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{3656AAA6-FA01-4655-BD1E-DDFD27F0DCE7}"
-	ProjectSection(SolutionItems) = preProject
-		ci.yml = ci.yml
-		docker-publish.yml = docker-publish.yml
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,8 +24,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{3656AAA6-FA01-4655-BD1E-DDFD27F0DCE7} = {4DEA0310-5A20-4B9E-BFCD-8204F8231461}
 	EndGlobalSection
 EndGlobal
