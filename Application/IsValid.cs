@@ -1,6 +1,8 @@
-﻿using System;
+﻿using check_personal_nr.Application;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,36 +10,26 @@ namespace check_personal_nr
 {
     public class IsValid
     {
-        public static bool IsValidPersonalNumber(string personNumber)
+        public static bool IsValidPersonalNumber(string personNumber)                              // centrsl method to check all the bool methods, if one is fale the check is false
         {
-            
-            LenghtChecker.NumberandLenghtChecker(personNumber);
-
-            PersonNumberArray(personNumber);
-
-            DateChecker.DateofBirth(personNumber, PersonNumberArray(personNumber));
-
+            if (LenghtChecker.NumberandLengthChecker(personNumber) && !ControlNumber.ConrtolCheckNumber(personNumber))      
+            {
+                return false;
+            }
+            if (DateChecker.DateofBirth(PersonNumberArray(personNumber))) 
+            {
+                return false;
+            }
             return true;
         }
-        public static int[] PersonNumberArray(string personNumber)
+        public static int[] PersonNumberArray(string personNumber)                 // method where we create the array of our personal number to later use in our checking bool methods 
         {
-
             int[] numberArray = new int[personNumber.Length];
             for (int i = 0; i < personNumber.Length; i++)
             {
-                //if (!int.TryParse(personNumber[i].ToString(), out numberArray[i]))
-                //{
-                //    break;
-                //}
-
                 numberArray[i] = personNumber[i];
-
-
             }
             return numberArray;
         }
-
-
-
     }
 }

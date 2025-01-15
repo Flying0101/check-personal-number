@@ -8,13 +8,20 @@ namespace check_personal_nr
 {
     public class LenghtChecker : IsValid
     {
-        public static bool NumberandLenghtChecker(string personNumber)
+        public static bool NumberandLengthChecker(string personNumber)     // method checking that the personal number is within a given length
         {
-            if (!personNumber.All(char.IsDigit) || personNumber.Length != 10)
+            personNumber = personNumber.Replace("-", "").Replace(" ", "");     // removes spaces and "-"
+
+            if (personNumber.Length == 12)
+            {
+                personNumber = personNumber.Substring(2);
+            }
+
+            if (personNumber.Length != 10 || !personNumber.All(char.IsDigit))
             {
                 return false;
             }
-            return true;
+            return true;                                                     // if the personal number is too long or short it will return false
         }
     }
 }
