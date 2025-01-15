@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace check_personal_nr
+﻿namespace check_personal_nr
 {
     public static class ExitMove
     {
-
         public static void Exit()
         {
             Console.Clear();
@@ -16,13 +9,17 @@ namespace check_personal_nr
             string text = "HAHAHA";
             Console.ForegroundColor = ConsoleColor.Red;
 
-            int centerY = Console.WindowHeight / 2;    // Center the HAHAHA text vertically
+            // Center the HAHAHA text vertically
+            int centerY = Console.WindowHeight / 2;
             for (int i = 0; i < text.Length; i++)
             {
                 Console.Clear();
 
-                string displayText = text.Substring(0, i + 1);     // Display the HAHAHA text one letter at a time
-                int padding = (Console.WindowWidth - displayText.Length) / 2; // Center the text horizontally
+                // Display the HAHAHA text one letter at a time
+                string displayText = text.Substring(0, i + 1);
+
+                // Center the text horizontally
+                int padding = (Console.WindowWidth - displayText.Length) / 2;
 
                 Console.SetCursorPosition(padding, centerY);
                 Console.Write(displayText);

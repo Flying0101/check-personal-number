@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace check_personal_nr
+﻿namespace check_personal_nr
 {
     public static class Ending
     {
-        public static void TheEnd()                                   // Why not 
-        { 
+        public static void TheEnd() // Why not                                    
+        {
             Console.Clear();
             Console.WriteLine("Personal number accepted...");
             Console.WriteLine("Stealing your identity...");
@@ -27,8 +21,8 @@ namespace check_personal_nr
                #  .==..__  """"   """"  __..==,  # 
                #   `""._(_).       .(_)_.""'   #
 """);
-
-            Thread.Sleep(2000);                                  // as program is so small we have used sleep
+            // as program is so small we have used sleep
+            Thread.Sleep(2000);
             ExitMove.Exit();
         }
     }
