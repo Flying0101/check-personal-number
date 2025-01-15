@@ -16,4 +16,3 @@ FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .
 ENTRYPOINT ["dotnet", "check-personal-nr.dll"]
-``
