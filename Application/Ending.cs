@@ -8,7 +8,7 @@ namespace check_personal_nr
 {
     public static class Ending
     {
-        public static void TheEnd() 
+        public static void TheEnd()                                   // Why not 
         { 
             Console.Clear();
             Console.WriteLine("Personal number accepted...");
@@ -28,7 +28,7 @@ namespace check_personal_nr
                #   `""._(_).       .(_)_.""'   #
 """);
 
-            Thread.Sleep(2000);
+            Thread.Sleep(2000);                                  // as program is so small we have used sleep
             ExitMove.Exit();
         }
     }
