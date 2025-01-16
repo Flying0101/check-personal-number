@@ -40,6 +40,7 @@ dotnet test
 The application accepts Swedish personal numbers in these formats:
 
 YYYYMMDDXXXX
+YYMMDDXXXX
 
 
 ## Validation
